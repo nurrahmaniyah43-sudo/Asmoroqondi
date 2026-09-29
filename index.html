@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makam Syekh Maulana Ibrahim Asmoroqondi - Wisata Religi & Sejarah Tuban</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'golden-batter': '#E8D1A7',
+                        'olive-harvest': '#9D9167',
+                        'toasted-caramel': '#84592B',
+                        'spiced-wine': '#743014',
+                        'cowhide-cocoa': '#442D1C',
+                        'cream-light': '#F8F3EA',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'subheading': ['Cormorant Garamond', 'serif'],
+                        'body': ['Libre Baskerville', 'serif'],
+                        'script': ['Allura', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Design Enhancements for Magazine Layout */
+        body {
+            background-color: #E8D1A7;
+            color: #442D1C;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .font-heading { font-family: 'Montserrat', sans-serif; font-weight: 800; }
+        .font-subheading { font-family: 'Cormorant Garamond', serif; }
+        .font-body { font-family: 'Libre Baskerville', serif; }
+        .font-script { font-family: 'Allura', cursive; }
+
+        .drop-cap::first-letter {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 0.5rem;
+            padding-top: 0.2rem;
+            color: #743014;
+            font-weight: bold;
+        }
+
+        .magazine-border {
+            border: 1px solid #84592B;
+            position: relative;
+        }
+        .magazine-border::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            border: 1px solid #9D9167;
+            pointer-events: none;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(68, 45, 28, 0.75) 0%, rgba(116, 48, 20, 0.85) 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #E8D1A7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #84592B;
+            border-radius: 4px;
+        }
+
+        /* Subtle Islamic Pattern Background Accent */
+        .bg-pattern {
+            background-image: radial-gradient(#9D9167 0.75px, transparent 0.75px);
+            background-size: 16px 16px;
+            opacity: 0.25;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-spiced-wine selection:text-golden-batter min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-cowhide-cocoa/95 text-golden-batter backdrop-blur-md border-b border-toasted-caramel/40 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo & Slogan -->
+                <a href="#hero" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full bg-olive-harvest flex items-center justify-center border border-golden-batter group-hover:scale-105 transition-transform">
+                        <i class="fa-solid font-bold text-cowhide-cocoa text-lg">🕌</i>
+                    </div>
+                    <div>
+                        <span class="font-heading text-lg sm:text-xl tracking-wider text-golden-batter uppercase block leading-none">Asmoroqondi</span>
+                        <span class="font-script text-olive-harvest text-sm sm:text-base leading-none">Jejak Ulama Nusantara</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#tentang" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Tentang</a>
+                    <a href="#daya-tarik" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Daya Tarik</a>
+                    <a href="#aktivitas" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Aktivitas</a>
+                    <a href="#kuliner" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Kuliner & UMKM</a>
+                    <a href="#informasi" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Informasi Wisata</a>
+                    <a href="#galeri" class="hover:text-olive-harvest transition-colors uppercase tracking-wide">Galeri</a>
+                </nav>
+
+               
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-golden-batter hover:text-olive-harvest focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cowhide-cocoa border-t border-toasted-caramel/30 px-4 pt-3 pb-6 space-y-3">
+            <a href="#tentang" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Tentang Destinasi</a>
+            <a href="#daya-tarik" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Daya Tarik Utama</a>
+            <a href="#aktivitas" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Aktivitas & Pengalaman</a>
+            <a href="#kuliner" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Kuliner & UMKM Local</a>
+            <a href="#informasi" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Informasi Ziarah</a>
+            <a href="#galeri" class="mobile-nav-link block text-golden-batter hover:text-olive-harvest py-1.5 font-subheading text-lg border-b border-toasted-caramel/20">Galeri Foto</a>
+           
+            <!--Tombol Instagram (Mobile)-->
+            <a href="https://www.instagram.com/disbudporapartuban" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-olive-harvest text-golden-batter py-2.5 rounded-lg mt-3 font-semibold">
+                <i class="fa-brands fa-instagram mr-1"></i> Instagram @disbudporapartuban
+            </a>
+
+            <!--Tombol Petunjuk Arah (Mobile)-->
+            <a href="https://maps.google.com/?q=Makam+Syekh+Maulana+Ibrahim+Asmoroqondi+Tuban" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-spiced-wine text-golden-batter py-2.5 rounded-lg mt-2 font-semibold">
+                <i class="fa-solid fa-location-arrow mr-1"></i> Buka Google Maps
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Magazine Cover Style) -->
+    <section id="hero" class="relative bg-cowhide-cocoa text-golden-batter py-16 sm:py-24 lg:py-32 overflow-hidden border-b-4 border-toasted-caramel">
+        <!-- Background Hero Image with Blend Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="Foto Gapura Asmoroqondi.jpg" 
+                 alt="Makam Syekh Maulana Ibrahim Asmoroqondi Tuban" 
+                 class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity transform scale-105 animate-pulse" 
+                 style="animation-duration: 12s;"
+                 onerror="this.src='https://placehold.co/1920x1080/442D1C/E8D1A7?text=Makam+Syekh+Maulana+Ibrahim+Asmoroqondi'">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="absolute inset-0 bg-pattern"></div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Magazine Header Tagline -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-olive-harvest/20 border border-olive-harvest/40 text-golden-batter text-xs sm:text-sm font-subheading uppercase tracking-widest mb-6">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+                Destinasi Wisata Religi & Sejarah Islam Tuban
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-golden-batter leading-tight mb-4">
+                Makam Syekh Maulana<br class="hidden sm:inline"/> Ibrahim Asmoroqondi
+            </h1>
+
+            <!-- Decorative Subheading -->
+            <p class="font-script text-3xl sm:text-5xl text-amber-200 mb-6 font-normal">
+                Jejak ulama, warisan untuk generasi.
+            </p>
+
+            <!-- Brand Pitch Box -->
+            <div class="max-w-3xl mx-auto bg-cowhide-cocoa/80 border-l-4 border-spiced-wine p-6 rounded-r-xl shadow-2xl backdrop-blur-sm mb-10 text-left sm:text-center magazine-border">
+                <p class="font-subheading text-xl sm:text-2xl italic leading-relaxed text-cream-light font-medium">
+                    &ldquo;Dengarkan deburan ombak pantai utara dan hidupkan kembali kekuatan iman dengan meneladani perjuangan sang pelopor islam nusantara.&rdquo;
+                </p>
+            </div>
+
+            <!-- Action Buttons & Audio Ambience Toggle -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#tentang" class="w-full sm:w-auto bg-spiced-wine hover:bg-toasted-caramel text-golden-batter font-heading px-8 py-4 rounded-lg shadow-xl border border-golden-batter/30 transition-all transform hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm">
+                    Jelajahi Warisan Sejarah <i class="fa-solid fa-arrow-down ml-2"></i>
+                </a>
+                <button id="audio-toggle-btn" class="w-full sm:w-auto bg-olive-harvest/30 hover:bg-olive-harvest/50 text-golden-batter border border-olive-harvest font-subheading text-lg px-6 py-3.5 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <i id="audio-icon" class="fa-solid fa-volume-xmark text-amber-300"></i> 
+                    <span id="audio-status">Putar Lagu Backsound</span>
+                </button>
+            </div>
+
+            <!-- Quick Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 text-center border-t border-b border-olive-harvest/30 py-6 bg-cowhide-cocoa/40 rounded-lg backdrop-blur-xs">
+                <div>
+                    <span class="block font-heading text-2xl text-amber-200">Abad ke-14</span>
+                    <span class="font-subheading text-sm text-golden-batter/80">Awal Perjuangan Dakwah</span>
+                </div>
+                <div>
+                    <span class="block font-heading text-2xl text-amber-200">Gesikharjo</span>
+                    <span class="font-subheading text-sm text-golden-batter/80">Kec. Palang, Tuban</span>
+                </div>
+                <div>
+                    <span class="block font-heading text-2xl text-amber-200">Pesisir</span>
+                    <span class="font-subheading text-sm text-golden-batter/80">Dekat Laut Jawa</span>
+                </div>
+                <div>
+                    <span class="block font-heading text-2xl text-amber-200">Ayahanda</span>
+                    <span class="font-subheading text-sm text-golden-batter/80">Sunan Ampel Surabaya</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Element for Ocean Ambience (Hidden) -->
+    <audio id="ocean-audio" loop preload="none">
+        <source src="Calm Humming Islamic Nasheed [ORIGINAL].mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- SHORT DESTINATION INFO (Magazine Spread) -->
+    <section id="tentang" class="py-16 sm:py-20 bg-golden-batter relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Mengenal Sosok Wali</span>
+                <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">Informasi Singkat Destinasi</h2>
+                <div class="w-24 h-1 bg-toasted-caramel mx-auto mt-3"></div>
+            </div>
+
+            <!-- Editorial 2-Column Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Left: Editorial Text Block -->
+                <div class="lg:col-span-7 bg-cream-light p-6 sm:p-10 rounded-2xl shadow-md border border-toasted-caramel/30 relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-olive-harvest rounded-full flex items-center justify-center text-golden-batter font-heading font-bold text-xl shadow">
+                        01
+                    </div>
+                    <h3 class="font-subheading text-2xl sm:text-3xl text-toasted-caramel font-bold mb-4 border-b border-olive-harvest/30 pb-2">
+                        Pilar Awal Penyeberan Islam di Tanah Jawa
+                    </h3>
+                    <p class="drop-cap text-cowhide-cocoa text-base sm:text-lg leading-relaxed mb-4">
+                        Makam Syekh Maulana Ibrahim Asmoroqondi terletak di Desa Gesikharjo, Kecamatan Palang, Kabupaten Tuban, Jawa Timur. Beliau adalah seorang ulama besar keturunan Samarkand (Asmoroqondi) yang menjadi tokoh sentral dalam sejarah penyiaran agama Islam di Nusantara pada akhir abad ke-14 dan awal abad ke-15.
+                    </p>
+                    <p class="text-cowhide-cocoa text-base leading-relaxed mb-6">
+                        Sebagai ayah dari **Sunan Ampel** serta kakek dari **Sunan Bonang** dan **Sunan Giri**, Syekh Maulana Ibrahim Asmoroqondi meletakkan fondasi dakwah yang ramah, santun, dan menyatu dengan budaya lokal masyarakat pesisir pantai utara Jawa. Kompleks makam ini kini menjadi situs cagar budaya dan pusat peziarahan religi nasional yang tak pernah sepi dari pengunjung.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-toasted-caramel/20">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-scroll text-spiced-wine text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-heading text-xs uppercase text-toasted-caramel">Peninggalan</h4>
+                                <p class="text-sm font-subheading font-bold">Inskripsi Batu Nisan & Gapura Paduraksa</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-compass text-spiced-wine text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-heading text-xs uppercase text-toasted-caramel">Karakter Situs</h4>
+                                <p class="text-sm font-subheading font-bold">Religi, Historis, dan Pesisir Sejuk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Visual Feature Card Grid -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-toasted-caramel text-golden-batter p-6 rounded-2xl shadow-lg relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 opacity-10 text-9xl">
+                            <i class="fa-solid fa-mosque"></i>
+                        </div>
+                        <span class="text-xs uppercase tracking-widest text-olive-harvest font-heading font-bold bg-cowhide-cocoa px-3 py-1 rounded-full">Silsilah Keagungan</span>
+                        <h4 class="font-subheading text-2xl font-bold mt-3 mb-2">Ayahanda Wali Songo</h4>
+                        <p class="text-sm text-golden-batter/90 leading-relaxed">
+                            Beliau membimbing generasi ulama legendaris yang melahirkan tradisi keberagaman dan kebudayaan Islam di Nusantara.
+                        </p>
+                    </div>
+
+                    <!-- Image Showcase Card -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-xl border-2 border-toasted-caramel group">
+                        <img src="Foto makam asmoroqondi 6.jpg" 
+                             alt="Gapura Kompleks Makam Asmoroqondi" 
+                             class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/800x600/84592B/E8D1A7?text=Gapura+Asmoroqondi'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-5 text-golden-batter">
+                            <p class="font-script text-2xl text-amber-200">Arsitektur Klasik Pesisir</p>
+                            <p class="text-xs font-subheading italic text-golden-batter/90">Kompleks ziarah dengan pengaruh arsitektur Jawa Islam kuno</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAYA TARIK UTAMA (Grid & Magazine Style) -->
+    <section id="daya-tarik" class="py-16 sm:py-24 bg-cream-light border-t border-b border-toasted-caramel/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Keistimewaan Destinasi</span>
+                <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">5 Daya Tarik Utama</h2>
+                <p class="font-subheading text-lg text-toasted-caramel mt-2">
+                    Pengalaman peziarahan mendalam yang memadukan spiritualitas, rekaman sejarah, dan keindahan alam pesisir Pantura.
+                </p>
+                <div class="w-24 h-1 bg-spiced-wine mx-auto mt-4"></div>
+            </div>
+
+            <!-- Magazine 5-Feature Layout Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Attraction Card 1 -->
+                <div class="bg-golden-batter rounded-2xl p-6 magazine-border hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-spiced-wine text-golden-batter flex items-center justify-center text-2xl mb-5 group-hover:rotate-6 transition-transform shadow-md">
+                            <i class="fa-solid fa-kaaba"></i>
+                        </div>
+                        <span class="text-xs font-heading font-bold uppercase text-toasted-caramel tracking-wider">Fokus Utama 01</span>
+                        <h3 class="font-subheading text-2xl font-bold text-cowhide-cocoa mt-1 mb-3">Makam Tokoh Sejarah Islam</h3>
+                        <p class="text-sm text-cowhide-cocoa/90 leading-relaxed font-body">
+                            Makam Syekh Maulana Ibrahim Asmoroqondi menjadi daya tarik utama karena memiliki nilai sejarah dan religi luar biasa yang berkaitan erat dengan awal mula perkembangan Islam di Pulau Jawa.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-toasted-caramel/30 text-xs font-subheading font-bold text-spiced-wine flex items-center gap-1">
+                        <i class="fa-solid fa-book-quran"></i> Situs Ziarah Utama Nusantara
+                    </div>
+                </div>
+
+                <!-- Attraction Card 2 -->
+                <div class="bg-golden-batter rounded-2xl p-6 magazine-border hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-olive-harvest text-cowhide-cocoa flex items-center justify-center text-2xl mb-5 group-hover:rotate-6 transition-transform shadow-md">
+                            <i class="fa-solid fa-hands-praying"></i>
+                        </div>
+                        <span class="text-xs font-heading font-bold uppercase text-toasted-caramel tracking-wider">Fokus Utama 02</span>
+                        <h3 class="font-subheading text-2xl font-bold text-cowhide-cocoa mt-1 mb-3">Wisata Religi yang Tenang</h3>
+                        <p class="text-sm text-cowhide-cocoa/90 leading-relaxed font-body">
+                            Suasana kompleks makam yang rimbun dan tenang sangat cocok untuk wisatawan yang ingin berziarah, berdoa, melantunkan zikir, serta menenangkan diri dalam ketentraman spiritual.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-toasted-caramel/30 text-xs font-subheading font-bold text-spiced-wine flex items-center gap-1">
+                        <i class="fa-solid fa-heart-pulse"></i> Oase Ketenangan Jiwa
+                    </div>
+                </div>
+
+                <!-- Attraction Card 3 -->
+                <div class="bg-golden-batter rounded-2xl p-6 magazine-border hover:shadow-xl transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-toasted-caramel text-golden-batter flex items-center justify-center text-2xl mb-5 group-hover:rotate-6 transition-transform shadow-md">
+                            <i class="fa-solid fa-monument"></i>
+                        </div>
+                        <span class="text-xs font-heading font-bold uppercase text-toasted-caramel tracking-wider">Fokus Utama 03</span>
+                        <h3 class="font-subheading text-2xl font-bold text-cowhide-cocoa mt-1 mb-3">Nilai Sejarah dan Budaya</h3>
+                        <p class="text-sm text-cowhide-cocoa/90 leading-relaxed font-body">
+                            Pengunjung dapat mengenal sejarah penyiaran agama Islam kuno serta mempelajari berbagai peninggalan artefak dan tradisi lokal yang menjadi bagian utuh dari budaya masyarakat setempat.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-toasted-caramel/30 text-xs font-subheading font-bold text-spiced-wine flex items-center gap-1">
+                        <i class="fa-solid fa-landmark"></i> Cagar Budaya Bernilai Tinggi
+                    </div>
+                </div>
+
+                <!-- Attraction Card 4 -->
+                <div class="bg-golden-batter rounded-2xl p-6 magazine-border hover:shadow-xl transition-all group flex flex-col justify-between md:col-span-1 lg:col-span-1">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-spiced-wine text-golden-batter flex items-center justify-center text-2xl mb-5 group-hover:rotate-6 transition-transform shadow-md">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <span class="text-xs font-heading font-bold uppercase text-toasted-caramel tracking-wider">Fokus Utama 04</span>
+                        <h3 class="font-subheading text-2xl font-bold text-cowhide-cocoa mt-1 mb-3">Lokasi Dekat Laut Jawa</h3>
+                        <p class="text-sm text-cowhide-cocoa/90 leading-relaxed font-body">
+                            Letaknya di kawasan pesisir memberikan aura dan hembusan angin khas utara. Wisatawan dapat menikmati pemandangan alam pesisir Pantura yang dekat dengan Laut Jawa selama perjalanan menuju kompleks.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-toasted-caramel/30 text-xs font-subheading font-bold text-spiced-wine flex items-center gap-1">
+                        <i class="fa-solid fa-wind"></i> Udara Pesisir Segar & Khas
+                    </div>
+                </div>
+
+                <!-- Attraction Card 5 (Span 2 Columns on Large Displays for Impact) -->
+                <div class="bg-cowhide-cocoa text-golden-batter rounded-2xl p-6 lg:p-8 md:col-span-2 lg:col-span-2 shadow-2xl relative overflow-hidden flex flex-col justify-between border-2 border-olive-harvest">
+                    <div class="absolute right-0 top-0 w-64 h-64 bg-olive-harvest/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-heading font-bold uppercase text-amber-300 bg-spiced-wine px-3 py-1 rounded-full">Fokus Utama 05 - Keunikan Khusus</span>
+                            <i class="fa-solid fa-star text-amber-300 text-xl"></i>
+                        </div>
+                        <h3 class="font-subheading text-2xl sm:text-3xl font-bold text-golden-batter mb-3">Perpaduan Wisata Religi dan Sejarah</h3>
+                        <p class="text-sm sm:text-base text-golden-batter/90 leading-relaxed font-body max-w-2xl">
+                            Makam Asmoroqondi menawarkan pengalaman wisata komprehensif yang memadukan kegiatan ziarah penuh khidmat dengan edukasi pembelajaran sejarah Islam Nusantara, sehingga perjalanan wisata menjadi jauh lebih bermakna dan berkesan bagi setiap pengunjung.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-toasted-caramel flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center space-x-2 text-amber-200 font-subheading text-sm">
+                            <i class="fa-solid fa-circle-check"></i> <span>Ziarah Khusyuk</span>
+                            <span class="text-olive-harvest">•</span>
+                            <i class="fa-solid fa-circle-check"></i> <span>Edukasi Sejarah</span>
+                            <span class="text-olive-harvest">•</span>
+                            <i class="fa-solid fa-circle-check"></i> <span>Budaya Pesantren</span>
+                        </div>
+                        <a href="#informasi" class="inline-flex items-center text-xs font-heading uppercase text-amber-300 hover:text-white transition-colors">
+                            Rencanakan Kunjungan <i class="fa-solid fa-chevron-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- AKTIVITAS & PENGALAMAN WISATA -->
+    <section id="aktivitas" class="py-16 sm:py-24 bg-golden-batter relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-toasted-caramel/30 pb-6">
+                <div>
+                    <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Pengalaman Pengunjung</span>
+                    <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">Aktivitas Utama Saat Berziarah</h2>
+                </div>
+                <p class="font-subheading text-base text-toasted-caramel max-w-md mt-4 md:mt-0">
+                    Nikmati rangkaian kegiatan ibadah, refleksi sejarah, dan penjelajahan budaya di sekitar kawasan makam.
+                </p>
+            </div>
+
+            <!-- Activity Grid Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Activity 1 -->
+                <div class="bg-cream-light rounded-2xl overflow-hidden shadow-md border border-toasted-caramel/20 hover:-translate-y-1 transition-transform">
+                    <img src="Foto makam asmoroqondi 9.jpg" 
+                         alt="Ziarah dan Doa Bersama" 
+                         class="w-full h-48 object-cover"
+                         onerror="this.src='https://placehold.co/600x400/84592B/E8D1A7?text=Ziarah+Khusyuk'">
+                    <div class="p-5">
+                        <span class="text-xs font-heading text-spiced-wine uppercase font-bold">Aktivitas Spiritual</span>
+                        <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa mt-1 mb-2">Ziarah & Doa Bersama</h3>
+                        <p class="text-xs text-cowhide-cocoa/80 leading-relaxed font-body">
+                            Melakukan ritual ziarah, tahlil, dan doa khusyuk di pelataran makam utama dengan suasana damai yang dinaungi pepohonan rindang.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="bg-cream-light rounded-2xl overflow-hidden shadow-md border border-toasted-caramel/20 hover:-translate-y-1 transition-transform">
+                    <img src="Komplek makam Asmoroqondi.webp" 
+                         alt="Edukasi Arsitektur & Peninggalan" 
+                         class="w-full h-48 object-cover"
+                         onerror="this.src='https://placehold.co/600x400/84592B/E8D1A7?text=Arsitektur+Klasik'">
+                    <div class="p-5">
+                        <span class="text-xs font-heading text-spiced-wine uppercase font-bold">Edukasi Sejarah</span>
+                        <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa mt-1 mb-2">Menyusuri Peninggalan</h3>
+                        <p class="text-xs text-cowhide-cocoa/80 leading-relaxed font-body">
+                            Mengamati detail inskripsi Kuno, gapura bersejarah, makam keluarga dan sahabat, serta sumur tua peninggalan masa penyebaran Islam awal di Jawa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="bg-cream-light rounded-2xl overflow-hidden shadow-md border border-toasted-caramel/20 hover:-translate-y-1 transition-transform">
+                    <img src="Pesisir Pantura.jpg" 
+                         alt="Menikmati Angin Laut Jawa" 
+                         class="w-full h-48 object-cover"
+                         onerror="this.src='https://placehold.co/600x400/84592B/E8D1A7?text=Pantai+Utara'">
+                    <div class="p-5">
+                        <span class="text-xs font-heading text-spiced-wine uppercase font-bold">Wisata Alam Pesisir</span>
+                        <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa mt-1 mb-2">Wisata Pesisir Pantura</h3>
+                        <p class="text-xs text-cowhide-cocoa/80 leading-relaxed font-body">
+                            Berjalan santai di sekitar kawasan desa Gesikharjo untuk menikmati keindahan garis pantai utara Laut Jawa pasca berziarah.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="bg-cream-light rounded-2xl overflow-hidden shadow-md border border-toasted-caramel/20 hover:-translate-y-1 transition-transform">
+                    <img src="Wiata Belanja UMKM.webp" 
+                         alt="Berbelanja Oleh-oleh khas Tuban" 
+                         class="w-full h-48 object-cover"
+                         onerror="this.src='https://placehold.co/600x400/84592B/E8D1A7?text=Pasar+Oleh-Oleh'">
+                    <div class="p-5">
+                        <span class="text-xs font-heading text-spiced-wine uppercase font-bold">Budaya & Belanja</span>
+                        <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa mt-1 mb-2">Wisata Belanja UMKM</h3>
+                        <p class="text-xs text-cowhide-cocoa/80 leading-relaxed font-body">
+                            Menjelajahi deretan kios souvenir lokal, membeli perlengkapan ibadah, kerajinan khas, dan beragam produk kuliner Tuban.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KULINER & UMKM / OLEH-OLEH -->
+    <section id="kuliner" class="py-16 sm:py-24 bg-cream-light border-t border-b border-toasted-caramel/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Cita Rasa & Souvenir Khas</span>
+                <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">Kuliner & UMKM Lokal</h2>
+                <p class="font-subheading text-lg text-toasted-caramel mt-2">
+                    Lengkapi perjalanan ziarah Anda dengan mencicipi hidangan khas pesisir Tuban dan membawa pulang oleh-oleh UMKM lokal.
+                </p>
+                <div class="w-24 h-1 bg-olive-harvest mx-auto mt-3"></div>
+            </div>
+
+            <!-- Tabbed/Card View for Culinary & UMKM -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Column 1: Kuliner Khas -->
+                <div class="bg-golden-batter p-6 sm:p-8 rounded-2xl magazine-border">
+                    <div class="flex items-center justify-between mb-6 border-b border-toasted-caramel/40 pb-4">
+                        <h3 class="font-subheading text-2xl sm:text-3xl font-bold text-cowhide-cocoa flex items-center gap-2">
+                            <i class="fa-solid fa-utensils text-spiced-wine"></i> Kuliner Pilihan Peziarah
+                        </h3>
+                        <span class="text-xs font-heading uppercase text-spiced-wine font-bold">Khas Tuban</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Food Item 1 -->
+                        <div class="flex flex-col sm:flex-row gap-4 bg-cream-light p-4 rounded-xl border border-toasted-caramel/20">
+                            <div class="w-full sm:w-28 h-24 rounded-lg bg-toasted-caramel flex-shrink-0 overflow-hidden">
+                                <img src="Foto Legen.jpeg" 
+                                     alt="Legen & Siwalan Khas Tuban" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.src='https://placehold.co/300x300/84592B/E8D1A7?text=Legen+Siwalan'">
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-subheading text-xl font-bold text-cowhide-cocoa">Es Legen & Buah Siwalan</h4>
+                                    <span class="text-xs font-bold text-spiced-wine bg-golden-batter px-2 py-0.5 rounded">Rp 5.000 - Rp 15.000</span>
+                                </div>
+                                <p class="text-xs text-cowhide-cocoa/80 mt-1 leading-relaxed">
+                                    Minuman manis alami dari nira pohon siwalan segar khas pesisir Tuban yang sangat menyegarkan dahaga setelah berziarah.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Food Item 2 -->
+                        <div class="flex flex-col sm:flex-row gap-4 bg-cream-light p-4 rounded-xl border border-toasted-caramel/20">
+                            <div class="w-full sm:w-28 h-24 rounded-lg bg-toasted-caramel flex-shrink-0 overflow-hidden">
+                                <img src="Foto Kare Rajungan Tuban.jpg" 
+                                     alt="Kare Rajungan Tuban" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.src='https://placehold.co/300x300/84592B/E8D1A7?text=Kare+Rajungan'">
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-subheading text-xl font-bold text-cowhide-cocoa">Kare Rajungan Pedas atau Olahan Laut</h4>
+                                    <span class="text-xs font-bold text-spiced-wine bg-golden-batter px-2 py-0.5 rounded">Rp 35.000 - Rp 60.000</span>
+                                </div>
+                                <p class="text-xs text-cowhide-cocoa/80 mt-1 leading-relaxed">
+                                    Masakan rajungan segar hasil tangkapan nelayan Palang dengan kuah kare pedas gurih kaya rempah nusantara.
+                                </p>
+                            </div>
+                        </div>
+
+ <!-- Food Item 3 -->
+                        <div class="flex flex-col sm:flex-row gap-4 bg-cream-light p-4 rounded-xl border border-toasted-caramel/20">
+                            <div class="w-full sm:w-28 h-24 rounded-lg bg-toasted-caramel flex-shrink-0 overflow-hidden">
+                                <img src="Foto Dumbek.jpeg" 
+                                     alt="Dumbek" 
+                                     class="w-full h-full object-cover"
+                                     onerror="this.src='https://placehold.co/300x300/84592B/E8D1A7?text=Dumbek'">
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-subheading text-xl font-bold text-cowhide-cocoa">Dumbek</h4>
+                                    <span class="text-xs font-bold text-spiced-wine bg-golden-batter px-2 py-0.5 rounded">Rp 1.500 - 3.000 / biji</span>
+                                </div>
+                                <p class="text-xs text-cowhide-cocoa/80 mt-1 leading-relaxed">
+                                    jajanan pasar tradisional khas yang berbentuk mirip terompet atau kerucut dan dibungkus menggunakan daun lontar atau janur.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Oleh-Oleh & UMKM -->
+                <div class="bg-cowhide-cocoa text-golden-batter p-6 sm:p-8 rounded-2xl shadow-xl">
+                    <div class="flex items-center justify-between mb-6 border-b border-toasted-caramel pb-4">
+                        <h3 class="font-subheading text-2xl sm:text-3xl font-bold text-golden-batter flex items-center gap-2">
+                            <i class="fa-solid fa-gift text-amber-300"></i> UMKM & Souvenir Asmoroqondi
+                        </h3>
+                        <span class="text-xs font-heading uppercase text-amber-300 font-bold">Produk Lokal</span>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- UMKM Item 1 -->
+                        <div class="bg-toasted-caramel/40 p-5 rounded-xl border border-olive-harvest/30">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-subheading text-xl font-bold text-amber-200">Batik Tenun Gedog Tuban</h4>
+                                    <p class="text-xs text-golden-batter/80 mt-1">
+                                        Batik tulis tradisional khas Tuban dengan bahan kain tenun manual dan motif khas pesisiran.
+                                    </p>
+                                </div>
+                                <span class="text-xs font-bold bg-spiced-wine text-golden-batter px-2.5 py-1 rounded">UMKM Gesikharjo</span>
+                            </div>
+                            <div class="mt-3 flex items-center justify-between text-xs text-golden-batter/70 border-t border-olive-harvest/20 pt-2">
+                                <span><i class="fa-solid fa-tag text-amber-300 mr-1"></i> Rp 100.000 - Rp 350.000</span>
+                                <span><i class="fa-solid fa-store text-amber-300 mr-1"></i> Sentra Kios Makam</span>
+                            </div>
+                        </div>
+
+                        <!-- UMKM Item 2 -->
+                        <div class="bg-toasted-caramel/40 p-5 rounded-xl border border-olive-harvest/30">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-subheading text-xl font-bold text-amber-200">Perlengkapan Ibadah & Tasbih</h4>
+                                    <p class="text-xs text-golden-batter/80 mt-1">
+                                        Tasbih kayu langka, sarung tenun, peci, mukena, serta kaligrafi ukir kayu buatan pengrajin lokal.
+                                    </p>
+                                </div>
+                                <span class="text-xs font-bold bg-spiced-wine text-golden-batter px-2.5 py-1 rounded">Souvenir Religi</span>
+                            </div>
+                            <div class="mt-3 flex items-center justify-between text-xs text-golden-batter/70 border-t border-olive-harvest/20 pt-2">
+                                <span><i class="fa-solid fa-tag text-amber-300 mr-1"></i> Rp 15.000 - Rp 150.000</span>
+                                <span><i class="fa-solid fa-store text-amber-300 mr-1"></i> Area Parkir & Utama</span>
+                            </div>
+                        </div>
+
+                        <!-- UMKM Item 3 -->
+                        <div class="bg-toasted-caramel/40 p-5 rounded-xl border border-olive-harvest/30">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-subheading text-xl font-bold text-amber-200">Minyak Wangi Non-Alkohol & Herbal</h4>
+                                    <p class="text-xs text-golden-batter/80 mt-1">
+                                        Wewangian harum khas ziarah, minyak zaitun, habbatussauda, dan racikan jamu tradisional khas Tuban.
+                                    </p>
+                                </div>
+                                <span class="text-xs font-bold bg-spiced-wine text-golden-batter px-2.5 py-1 rounded">Khas Ziarah</span>
+                            </div>
+                            <div class="mt-3 flex items-center justify-between text-xs text-golden-batter/70 border-t border-olive-harvest/20 pt-2">
+                                <span><i class="fa-solid fa-tag text-amber-300 mr-1"></i> Rp 10.000 - Rp 50.000</span>
+                                <span><i class="fa-solid fa-store text-amber-300 mr-1"></i> Kios Pertokoan</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAVEL INFORMATION GRID -->
+    <section id="informasi" class="py-16 sm:py-24 bg-golden-batter relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Panduan Peziarah</span>
+                <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">Informasi Wisata & Akses</h2>
+                <p class="font-subheading text-lg text-toasted-caramel mt-2">
+                    Informasi praktis dan petunjuk teknis untuk kenyamanan perjalanan ziarah Anda.
+                </p>
+                <div class="w-24 h-1 bg-spiced-wine mx-auto mt-3"></div>
+            </div>
+
+            <!-- Table & Card Style Information Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Info Box 1: Lokasi & Jam Operasional -->
+                <div class="bg-cream-light p-6 rounded-2xl magazine-border space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-spiced-wine text-golden-batter flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa">Jam Operasional</h3>
+                            <p class="text-xs text-toasted-caramel font-heading">Buka Setiap Hari</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-cowhide-cocoa/90 leading-relaxed font-body border-t border-toasted-caramel/20 pt-4">
+                        Kompleks Makam Syekh Maulana Ibrahim Asmoroqondi terbuka untuk peziarah **24 Jam penuh** setiap hari sepanjang tahun.
+                    </p>
+                    <div class="bg-golden-batter/50 p-3 rounded-lg text-xs font-subheading text-cowhide-cocoa">
+                        <i class="fa-solid fa-lightbulb text-spiced-wine mr-1"></i> Waktu terramai biasanya pada Kamis malam (Malam Jumat), hari libur nasional, dan bulan Ruwah/Sya'ban.
+                    </div>
+                </div>
+
+                <!-- Info Box 2: Tiket & Fasilitas -->
+                <div class="bg-cream-light p-6 rounded-2xl magazine-border space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-toasted-caramel text-golden-batter flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-ticket"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa">Tiket Masuk & Parkir</h3>
+                            <p class="text-xs text-toasted-caramel font-heading">Ekonomis & Terjangkau</p>
+                        </div>
+                    </div>
+                    <ul class="text-sm text-cowhide-cocoa/90 space-y-2 font-body border-t border-toasted-caramel/20 pt-4">
+                        <li class="flex justify-between"><span>Tiket Masuk:</span> <strong class="text-spiced-wine">Gratis (Infak Sukarela)</strong></li>
+                        <li class="flex justify-between"><span>Parkir Sepeda Motor:</span> <strong>Rp 3.000 - Rp 5.000</strong></li>
+                        <li class="flex justify-between"><span>Parkir Mobil Pribadi:</span> <strong>Rp 10.000</strong></li>
+                        <li class="flex justify-between"><span>Parkir Bus Rombongan:</span> <strong>Rp 20.000 - Rp 30.000</strong></li>
+                    </ul>
+                </div>
+
+                <!-- Info Box 3: Aksesibilitas & Kontak -->
+                <div class="bg-cream-light p-6 rounded-2xl magazine-border space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-olive-harvest text-cowhide-cocoa flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-subheading text-xl font-bold text-cowhide-cocoa">Akses & Lokasi</h3>
+                            <p class="text-xs text-toasted-caramel font-heading">Mudah Dijangkau</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-cowhide-cocoa/90 leading-relaxed font-body border-t border-toasted-caramel/20 pt-4">
+                        Berlokasi di jalur utama Daendels / Jalan Pesisir Pantura Tuban-Gresik, Desa Gesikharjo, Kecamatan Palang. Berjarak sekitar 10 km (15 menit) ke arah timur dari Alun-Alun Pusat Kota Tuban.
+                    </p>
+                    <a href="https://maps.google.com/?q=Makam+Syekh+Maulana+Ibrahim+Asmoroqondi+Tuban" target="_blank" class="block w-full text-center bg-spiced-wine hover:bg-toasted-caramel text-golden-batter py-2.5 rounded-lg text-xs font-heading uppercase transition-colors shadow">
+                        <i class="fa-solid fa-map-pin mr-1"></i> Buka Rute Google Maps
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Facilities Checklist Horizontal Bar -->
+            <div class="mt-12 bg-cowhide-cocoa text-golden-batter p-8 rounded-2xl shadow-xl">
+                <h3 class="font-subheading text-2xl font-bold text-amber-200 mb-6 text-center">Fasilitas Kompleks Peziarahan</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-mosque text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Masjid & Musholla Luas</p>
+                    </div>
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-square-parking text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Parkir Bus Rombongan</p>
+                    </div>
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-restroom text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Toilet & Tempat Wudhu</p>
+                    </div>
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-store text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Sentra Kios Oleh-Oleh</p>
+                    </div>
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-chair text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Pendopo & Rest Area</p>
+                    </div>
+                    <div class="p-3 bg-toasted-caramel/30 rounded-xl border border-olive-harvest/30">
+                        <i class="fa-solid fa-utensils text-2xl text-amber-300 mb-2"></i>
+                        <p class="text-xs font-subheading font-bold">Warung Makan 24 Jam</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- VIDEO REKOMENDASI & TESTIMONI -->
+    <section class="py-16 bg-cream-light border-b border-toasted-caramel/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-5">
+                    <span class="font-script text-3xl text-spiced-wine block">Dokumentasi Visual</span>
+                    <h2 class="font-heading text-2xl sm:text-3xl text-cowhide-cocoa uppercase mb-4">Video Rekomendasi Wisata</h2>
+                    <p class="font-subheading text-base text-cowhide-cocoa/90 leading-relaxed mb-6">
+                        Saksikan gambaran langsung kedamaian, kemegahan arsitektur, serta suasana spiritual masyarakat dan peziarah di Makam Syekh Maulana Ibrahim Asmoroqondi.
+                    </p>
+                    <div class="p-4 bg-golden-batter rounded-xl border-l-4 border-spiced-wine">
+                        <p class="text-xs italic text-cowhide-cocoa">
+                            &ldquo;Suasana malam hari di Asmoroqondi sungguh menenangkan hati. Deburan angin laut utara menambah kekhusyukan saat berdoa.&rdquo;
+                        </p>
+                        <span class="text-xs font-bold text-spiced-wine mt-2 block">— Catatan Perjalanan Peziarah</span>
+                    </div>
+                </div>
+
+                <!-- Embedded Video Responsive Container -->
+                <div class="lg:col-span-7">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-toasted-caramel bg-black aspect-video">
+                        <video class="w-full h-full" autoplay loop muted playsinline>
+                            <source src="Video Promosi Asmoroqondi.mp4" type="video/mp4">
+                            Browser Anda tidak mendukung pemutaran video ini.
+                        </video>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY (Grid Magazine Style) -->
+    <section id="galeri" class="py-16 sm:py-24 bg-golden-batter">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="font-script text-3xl sm:text-4xl text-spiced-wine block">Dokumentasi Foto</span>
+                <h2 class="font-heading text-2xl sm:text-4xl text-cowhide-cocoa uppercase tracking-tight">Galeri Wisata & Ziarah</h2>
+                <p class="font-subheading text-lg text-toasted-caramel mt-2">
+                    Kumpulan 10 potret visual keindahan kompleks, arsitektur, kebudayaan, dan suasana alam sekitar Makam Asmoroqondi.
+                </p>
+                <div class="w-24 h-1 bg-spiced-wine mx-auto mt-3"></div>
+            </div>
+
+            <!-- Magazine Mosaic Photo Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Image Item 1 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=80', 'Kompleks Makam Utama Syekh Maulana Ibrahim Asmoroqondi', 'Sumber: Unsplash Dokumentasi Wisata')">
+                    <img src="Foto makam asmoroqondi 8.jpg" 
+                         alt="Kompleks Makam Utama" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+1'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Kompleks Utama Makam</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 2 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=1200&q=80', 'Arsitektur Gapura Klasik Pesisir', 'Sumber: Arsip Wisata Tuban')">
+                    <img src="Foto Gapura Asmoroqondi.jpg" 
+                         alt="Gapura Klasik" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+2'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Gapura Klasik Cagar Budaya</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 3 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&w=1200&q=80', 'Suasana Khusyuk Peziarah Berdoa', 'Sumber: Dokumentasi Ziarah Religi')">
+                    <img src="Foto makam asmoroqondi 3.jpg" 
+                         alt="Suasana Berdoa" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+3'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Kekhusyukan Para Peziarah</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+
+
+                <!-- Image Item 5 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1590076175571-4b5459efb08c?auto=format&fit=crop&w=1200&q=80', 'Masjid dan Menara Kompleks Asmoroqondi', 'Sumber: Galeri Arsitektur Islam')">
+                    <img src="Masjid kompleks Asmoroqondi.jpg" 
+                         alt="Masjid Kompleks" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+5'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Masjid & Menara Kompleks</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 6 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80', 'Kuliner Segar Minuman Es Legen Siwalan', 'Sumber: Kuliner Khas Tuban')">
+                    <img src="Foto Legen.jpeg" 
+                         alt="Es Legen Siwalan" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+6'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Kuliner Es Legen Khas</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 7 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1200&q=80', 'Deretan Kios Souvenir & Pertokoan UMKM', 'Sumber: Pasar UMKM Gesikharjo')">
+                    <img src="Wiata Belanja UMKM.webp" 
+                         alt="Kios Souvenir UMKM" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+7'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Pusat Souvenir UMKM</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 8 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1200&q=80', 'Hidangan Kare Rajungan Pedas khas Palang Tuban', 'Sumber: Wisata Kuliner Pesisir')">
+                    <img src="Foto Kare Rajungan Tuban.jpg" 
+                         alt="Kare Rajungan" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+8'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Kare Rajungan Pesisir</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+                <!-- Image Item 9 -->
+                <div class="gallery-item relative rounded-xl overflow-hidden shadow-md group cursor-pointer border border-toasted-caramel/30 h-56"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80', 'Suasana Sunset Indah di Pantai Gesikharjo Tuban', 'Sumber: Senja Pesisir Pantura')">
+                    <img src="Sunset di Pantai.webp" 
+                         alt="Sunset Pantai" 
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         onerror="this.src='https://placehold.co/600x600/84592B/E8D1A7?text=Foto+9'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-cowhide-cocoa/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-3 text-golden-batter">
+                        <span class="text-xs font-subheading font-bold">Senja di Pesisir Asmoroqondi</span>
+                        <span class="text-[10px] text-golden-batter/70">Klik untuk memperbesar</span>
+                    </div>
+                </div>
+
+            
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal Container -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4 backdrop-blur-md">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-golden-batter hover:text-amber-300 text-3xl focus:outline-none">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full bg-cowhide-cocoa rounded-2xl overflow-hidden border border-toasted-caramel shadow-2xl">
+            <img id="lightbox-img" src="" alt="Enlarged gallery view" class="w-full max-h-[70vh] object-contain bg-black">
+            <div class="p-5 text-golden-batter">
+                <h4 id="lightbox-caption" class="font-subheading text-2xl font-bold text-amber-200"></h4>
+                <p id="lightbox-source" class="text-xs font-heading text-olive-harvest mt-1 uppercase"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-cowhide-cocoa text-golden-batter border-t-4 border-toasted-caramel pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-6 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-olive-harvest flex items-center justify-center text-cowhide-cocoa">
+                            <i class="fa-solid fa-mosque"></i>
+                        </div>
+                        <span class="font-heading text-xl text-golden-batter uppercase">Asmoroqondi Tuban</span>
+                    </div>
+                    <p class="font-script text-3xl text-amber-200">
+                        Jejak ulama, warisan untuk generasi.
+                    </p>
+                    <p class="text-xs text-golden-batter/80 leading-relaxed font-body max-w-md">
+                        Situs resmi informasi wisata religi dan sejarah Makam Syekh Maulana Ibrahim Asmoroqondi, Desa Gesikharjo, Kecamatan Palang, Kabupaten Tuban, Jawa Timur.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-heading text-sm uppercase text-amber-300 tracking-wider">Navigasi Halaman</h4>
+                    <ul class="text-xs space-y-2 font-subheading text-base">
+                        <li><a href="#hero" class="hover:text-amber-300 transition-colors">Beranda Utama</a></li>
+                        <li><a href="#tentang" class="hover:text-amber-300 transition-colors">Tentang Syekh Ibrahim</a></li>
+                        <li><a href="#daya-tarik" class="hover:text-amber-300 transition-colors">5 Daya Tarik Utama</a></li>
+                        <li><a href="#kuliner" class="hover:text-amber-300 transition-colors">Kuliner & Souvenir UMKM</a></li>
+                        <li><a href="#informasi" class="hover:text-amber-300 transition-colors">Jam & Akses Ziarah</a></li>
+                        <li><a href="#galeri" class="hover:text-amber-300 transition-colors">Galeri Dokumentasi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Location -->
+                <div class="md:col-span-3 space-y-3">
+                    <h4 class="font-heading text-sm uppercase text-amber-300 tracking-wider">Lokasi & Kontak</h4>
+                    <p class="text-xs leading-relaxed text-golden-batter/80">
+                        <i class="fa-solid fa-location-dot text-amber-300 mr-1"></i> Desa Gesikharjo, Kec. Palang, Kab. Tuban, Jawa Timur 62391
+                    </p>
+                    <div class="pt-2 flex space-x-3">
+                        <a href="https://maps.google.com/?q=Makam+Syekh+Maulana+Ibrahim+Asmoroqondi+Tuban" target="_blank" aria-label="Google Maps" class="w-8 h-8 rounded bg-toasted-caramel flex items-center justify-center hover:bg-spiced-wine transition-colors">
+                            <i class="fa-solid fa-map-location-dot text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-8 h-8 rounded bg-toasted-caramel flex items-center justify-center hover:bg-spiced-wine transition-colors">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" class="w-8 h-8 rounded bg-toasted-caramel flex items-center justify-center hover:bg-spiced-wine transition-colors">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="w-8 h-8 rounded bg-toasted-caramel flex items-center justify-center hover:bg-spiced-wine transition-colors">
+                            <i class="fa-brands fa-youtube text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="border-t border-toasted-caramel/50 pt-6 text-center text-xs text-golden-batter/60 font-subheading flex flex-col sm:flex-row items-center justify-between gap-2">
+                <p>&copy; 2026 Landing Page Wisata Makam Syekh Maulana Ibrahim Asmoroqondi. All rights reserved.</p>
+                <p>Designed with Magazine Grid Concept • Tuban, Jawa Timur</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Ambient Audio Player Mechanics
+        const audioBtn = document.getElementById('audio-toggle-btn');
+        const oceanAudio = document.getElementById('ocean-audio');
+        const audioIcon = document.getElementById('audio-icon');
+        const audioStatus = document.getElementById('audio-status');
+        let isPlaying = false;
+
+        audioBtn.addEventListener('click', () => {
+            if (!isPlaying) {
+                oceanAudio.play().then(() => {
+                    isPlaying = true;
+                    audioIcon.className = "fa-solid fa-volume-high text-amber-300 animate-pulse";
+                    audioStatus.textContent = "Hentikan Backsound";
+                    audioBtn.classList.add("bg-spiced-wine");
+                }).catch(err => {
+                    console.log("Audio play error:", err);
+                });
+            } else {
+                oceanAudio.pause();
+                isPlaying = false;
+                audioIcon.className = "fa-solid fa-volume-xmark text-amber-300";
+                audioStatus.textContent = "Putar Backsound";
+                audioBtn.classList.remove("bg-spiced-wine");
+            }
+        });
+
+        // Lightbox Modal Mechanics
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxSource = document.getElementById('lightbox-source');
+
+        function openLightbox(imgUrl, captionText, sourceText) {
+            lightboxImg.src = imgUrl;
+            lightboxCaption.textContent = captionText;
+            lightboxSource.textContent = sourceText;
+            lightboxModal.classList.remove('hidden');
+            lightboxModal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            lightboxModal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close Lightbox on Click Outside
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        // Close Lightbox on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
